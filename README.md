@@ -27,6 +27,21 @@ A simple interfaces featuring:
 - Animated icons  
 - Footer  
 - Fully responsive design across screen sizes
+## Tree 
+-project/
+ -assets/
+  -css/
+   -companies.css
+   -employee.css
+   -job.css
+  -images
+  -js/
+   -script.js
+  -svg
+  -webfonts
+-companies.html
+-employee.html
+-index.html
 
 ## 🔮 Next Steps
 This interfaces is part of a larger project I plan to build soon, which will include:
