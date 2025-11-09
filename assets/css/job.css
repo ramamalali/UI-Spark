@@ -37,7 +37,6 @@ body {
 }
 
 .main-header .part-right {
-  width: 70%;
   justify-content: end;
   display: flex;
   padding: 16px 20px 0 0;
@@ -67,7 +66,9 @@ body {
   background-color: #141313;
   position: absolute;
   top: 56px;
-  left: -15px;
+  transform: translate(-50%, 50%);
+  left: 55%;
+  top: 59%;
   border-radius: 6px;
   display: none;
   justify-content: space-around;
@@ -186,12 +187,12 @@ form {
   flex-wrap: wrap;
   gap: 62px;
   padding-inline: 100px;
+  margin-top: 63px;
 }
 
 .mybox {
   background-color: white;
   width: 327px;
-  margin-top: 63px;
   padding: 6px 23px;
   box-shadow: 0px 0px 1px #282828;
   border-radius: 6px;
@@ -282,7 +283,7 @@ form {
 .content {
   width: 100%;
   background-color: #5c5b5b;
-  padding: 33px;
+padding: 22px 57px 22px 95px;
 }
 
 .row {
@@ -350,31 +351,36 @@ ul {
 
 @media (min-width: 200px) and (max-width: 667px) {
   .main-header {
-    display: block;
-    height: 69px;
+    display: flex;
+    align-items: center;
   }
-
-  .main-header .part-right {
+ .main-header .part-right {
+    padding: 0;
+    padding-right: 20px;
+  }
+  .main-header .part-right a {
     display: none;
   }
+
   .main-header .part-right .small-screen {
     display: inline-block;
   }
   .part-top #search-input {
-    width: 410px;
+    width: 284px !important;
   }
 
   .footer-col {
     padding: 11px 15px;
     margin: auto;
     margin-bottom: 13px;
+    width: 42%;
   }
 
   .footer .content .recent {
     padding-top: 9px;
-    padding-left: -5px;
     font-size: 11px;
     display: block;
+    text-align: center;
   }
 
   .row {
@@ -385,29 +391,38 @@ ul {
 
 @media (min-width: 667px) and (max-width: 992px) {
   .main-header {
-    display: block;
-    height: 69px;
+    display: flex;
+    align-items: center;
   }
 
   .main-header .part-right {
+    padding: 0;
+    padding-right: 20px;
+  }
+  .main-header .part-right a {
     display: none;
   }
+
   .main-header .part-right .small-screen {
     display: inline-block;
   }
   .part-top #search-input {
-    width: 410px;
+    width: 410px !important;
   }
-
+  .main-div {
+    gap: 38px;
+  }
   .footer .content .recent {
     padding-top: 9px;
-    padding-left: -5px;
     font-size: 11px;
     display: block;
   }
 
-  .row {
-    display: block;
+  .footer-col ul li a {
+    font-size: 10px;
+  }
+  .footer-col h1 {
+    font-size: 15px;
   }
 }
 

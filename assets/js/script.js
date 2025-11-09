@@ -2,11 +2,16 @@
 
 function menuToggle(element) {
       let dropdown = document.querySelector('.dropdown'); 
+        let jobsIcon = document.getElementById('jobsIcon');
   
   if (dropdown.style.display == "flex") {
           dropdown.style.display = "none";
+           jobsIcon.classList.remove('selected');
+           jobsIcon.classList.add('unselected');
       } else {
           dropdown.style.display = "flex";
+          jobsIcon.classList.remove('unselected');
+          jobsIcon.classList.add('selected');
       }  
      
        if(element.style.fontWeight === 'bold'){
@@ -15,36 +20,6 @@ function menuToggle(element) {
         element.style.fontWeight = 'bold' ;
        
     }
-
-
-/* //search and filter
-function search(){
-    let searchText = document.getElementById('search-input').value;
-    let paragraphs = document.getElementsByTagName('p');
-
-    for( let i = 0 ; i <paragraphs.length ; i++){
-        let paragraph =paragraphs[i];
-        if(Text.includes(searchText)){
-            paragraph.classList.add('highlight');
-        }else{
-            paragraph.classList.remove('highlight');
-        }
-    }
-}
-function filter(){
-let paragraphs = document.getElementsByTagName('p');
-for( let i =0 ; i<paragraphs.length ; i++ ){
-    let paragraph = paragraphs[i];
-    if(paragraph.classList.contains('highlight')){
-        paragraph.style.display = 'block';
-    }else{
-        paragraph.style.display = 'none';
-    }
-}
-} */
-
-
-
 
 
 
@@ -82,9 +57,16 @@ for (let i = 0; i < color.length; i++) {
     });
 }
 
+
+
+
 const carousel = document.querySelector('.carousel');
  firstImg =  carousel.querySelectorAll('img')[0];
  arrowIcons = document.querySelectorAll('.wrapper img');
+
+const carouselButtom = document.querySelector('.carouselButtom');
+ firstImg =  carouselButtom.querySelectorAll('img')[0];
+ wrapperButtomicon = document.querySelectorAll('.wrapperButtom img');
 
 let isDragStart = false , prevPageX , prevScrollLeft ;
 let firstImgWidth = firstImg.clientWidth + 14;
@@ -93,10 +75,18 @@ const showHideIcon =() =>{
     let scrollWidth = carousel.scrollWidth - carousel.clientWidth ;
     arrowIcons[0].style.display =  carousel.scrollLeft == 0 ? 'none' : 'block';
     arrowIcons[1].style.display =  carousel.scrollLeft == scrollWidth ? 'none' : 'block';
+    wrapperButtomicon[0].style.display =  carouselButtom.scrollLeft == 0 ? 'none' : 'block';
+    wrapperButtomicon[1].style.display =  carouselButtom.scrollLeft == scrollWidth ? 'none' : 'block';
 }
 arrowIcons.forEach(icon => {
    icon.addEventListener('click' , () =>{
     carousel.scrollLeft +=icon.id == 'prev' ? - firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIcon(),60);
+   }); 
+});
+wrapperButtomicon.forEach(icon => {
+   icon.addEventListener('click' , () =>{
+    carouselButtom.scrollLeft +=icon.id == 'prevButtom' ? - firstImgWidth : firstImgWidth;
     setTimeout(() => showHideIcon(),60);
    }); 
 });

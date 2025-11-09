@@ -1,334 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.top,
+.buttom {
+  font-size: 23px;
+  text-align: center;
+  margin-top: 50px;
+}
+.wrapper , .wrapperButtom{
+  width: 85%;
+  margin: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
 }
 
-body {
-    background-image: url('../images/bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100vw;
-    display: grid;
-    position: relative;
-    grid-template-rows: 2fr 5fr;
-    font-family: 'Montserrat', sans-serif;
+.wrapper .carousel , .wrapperButtom .carouselButtom{
+  overflow: hidden;
+  margin-top: 20px;
+  display: flex;
+  scroll-behavior: smooth;
+  justify-content: space-around;
+  gap: 63px;
+  padding-inline: 61px;
+}
+ .dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+ .dragging img {
+  pointer-events: none;
+}
+.wrapper .carousel div,
+.wrapperButtom .carouselButtom div {
+  margin-bottom: 23px;
+  display: grid;
 }
 
-.main-header {
-    height: 48px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    box-shadow: 0px 0px 1px rgb(43, 41, 41);
-    background-color: #fff;
-    color: #938C8C;
+.wrapper .carousel div span,
+.wrapperButtom .carouselButtom div span {
+  padding-left: 19px;
+  padding-top: 26px;
 }
 
-.main-header .part-left {
-    width: 30%;
-    padding-left: 20px;
-    font-size: 30px;
-    padding-top: 6px;
-    color: black;
-    font-family: Montserrat;
+div img:hover {
+  transform: translateY(-2%);
 }
 
-.main-header .part-right {
-    width: 70%;
-    justify-content: space-between;
-    display: flex;
-    padding: 16px 21px 0 0;
-    font-size: 14px;
-    position: relative;
-}
-
-.main-header .part-right span {
-    color: red;
-}
-
-.main-header .part-right a {
-    color: black;
-    text-decoration: none;
-}
-.selected{
-    transform: rotate(180deg);
- }
-  
-  .unselected{
-    transform: rotate(0);
- }
-.main-header .part-right .dropdown {
-    width: 60%;
-    background-color: #141313;
-    position: absolute;
-    top: 51px;
-    left: -15px;
-    z-index: 999;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-around;
-    height: 43px;
-    padding-top: 12px;
-    font-size: 17px;
-}
-
-.main-header .part-right .dropdown .color {
-    color: #fff;
-}
-
-.main-header .part-right .dropdown .active {
-    color: brown;
-}
-
-.main-header .part-right .dropdown::before {
-    position: absolute;
-    content: '';
-    height: 19px;
-    width: 19px;
-    background-color: black;
-    right: 442px;
-    top: -10px;
-    transform: rotate(45deg);
-    z-index: -1;
-}
-
-.main-header .part-right img {
-    width: 13px;
-}
-
-.top {
-    font-size: 23px;
-    margin: 66px 0 0 566px;
-}
-.wrapper{
-    width: 1000px;
-    margin-left: 227px;
-    position: relative;
-}
-
-.wrapper .carousel {
-    overflow: hidden;
-   /*  padding-left: 112px; */
-    margin-top: 20px;
-    margin-right: 110px;
-    display: flex;
-    scroll-behavior: smooth;
-    justify-content: space-around;
-}
-.carousel .dragging{
-    scroll-behavior: auto;
-    cursor: grab;  
-}
-.carousel .dragging img{
-    pointer-events: none;
-}
-.wrapper .carousel p,
-.wrapper .carousel p {
-    margin-bottom: 23px;
-    display: grid;
-    padding-left: 63px;
-}
-
-.wrapper .carousel p span,
-.wrapper .carousel p span {
-    padding-left: 19px;
-    padding-top: 26px;
+ .prev ,  .prevButtom,
+ .next , .nextButtom {
+  text-align: center;
+  line-height: 46px;
+  cursor: pointer;
+  margin-bottom: 54px;
 }
 
 .buttom {
-    font-size: 25px;
-    margin: 67px 0 20px 453px;
+  margin-bottom: 40px;
 }
-
-p img:hover {
-    transform: translateY(-2%);
-}
-
-
-.wrapper .prev ,.wrapper .next{
-    text-align: center;
-    line-height: 46px;
-    cursor: pointer;
-
-}
-.wrapper .prev{
-    transform: translate(-33px ,85px);
-    
-}
-.wrapper .next{
-    transform: translate(926px, -143px);
-}
-
-
-
-
-
-
-
-
-.content {
-    max-width: 1348px;
-    background-color: #5c5b5b;
-    height: 205px;
-    padding: 33px 0 0 48px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer {
-    padding: 34px 0 0 0;
-    height: 236px;
-
-}
-
-ul {
-    list-style: none;
-
-}
-
-.footer-col {
-    width: 20%;
-    padding: 0 15px;
-}
-
-.footer-col h1 {
-    font-size: 18px;
-    margin-bottom: 14px;
-    font-weight: 500px;
-    position: relative;
-    color: #fff;
-}
-
-.footer .content .recent {
-    padding-top: 32px;
-    padding-left: 16px;
-    font-size: 14px;
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-.footer .content .line {
-    border-bottom: 2px solid white;
-    width: 846px;
-}
-
-.footer-col h1::before {
-    content: '';
-    position: relative;
-    left: 0;
-    bottom: -10px;
-    background-color: aqua;
-    height: 2px;
-    width: 50px;
-
-}
-
-.footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 200px;
-    display: block;
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-    color: #000;
-    padding-left: 10px;
-
-}
-
-
-
-
-
-/* responsive */
-
-@media (min-width : 350px) and (max-width : 667px) {
-    .main-header {
-        display: block;
-        height: 69px;
-    }
-
-    .main-header .part-right {
-        display: none;
-    }
-
-    .top,
-    .buttom {
-
-        margin: 66px 0 0 363px;
-    }
-
-    .slider-controller .next {
-        transform: translate(803px, -136px);
-    }
-
-    .footer {
-        height: 357px;
-    }
-
-    .footer-col {
-        padding: 11px 15px;
-    }
-
-    .content {
-        height: 761px;
-    }
-
-    .footer .content .recent {
-        padding-top: 9px;
-        padding-left: -5px;
-        font-size: 11px;
-        display: block;
-    }
-
-    .row {
-        display: block;
-    }
-}
-
-@media (min-width : 667px) and (max-width : 992px) {
-    .main-header .part-right a {
-        display: none;
-    }
-
-    .wrapper{
-        width:calc(100% /5);
-    }
-
-    .footer {
-        height: 357px;
-    }
-
-    .footer-col {
-        padding: 11px 15px;
-    }
-
-    .content {
-        height: 761px;
-    }
-
-    .footer .content .recent {
-        padding-top: 9px;
-        padding-left: -5px;
-        font-size: 11px;
-        display: block;
-    }
-
-    .row {
-        display: block;
-    }
-}
-
