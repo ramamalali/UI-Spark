@@ -28,20 +28,21 @@ A simple interfaces featuring:
 - Footer  
 - Fully responsive design across screen sizes
 ## Tree 
--project/
- -assets/
-  -css/
-   -companies.css
-   -employee.css
-   -job.css
-  -images
-  -js/
-   -script.js
-  -svg
-  -webfonts
--companies.html
--employee.html
--index.html
+📁 project/
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   ├── 📄 companies.css
+│   │   ├── 📄 employee.css
+│   │   └── 📄 job.css
+│   ├── 📁 js/
+│   │   └── 📄 script.js
+│   ├── 📁 images/
+│   ├── 📁 svg/
+│   ├── 📁 webfonts/
+├── 📄 companies.html
+├── 📄 employee.html
+├── 📄 index.html
+├── 📄 README.md
 
 ## 🔮 Next Steps
 This interfaces is part of a larger project I plan to build soon, which will include:
@@ -50,7 +51,7 @@ This interfaces is part of a larger project I plan to build soon, which will inc
 - Possibly a CMS (like WordPress)
 
 ## 📂 Live Preview
-[Project link on GitHub Pages](#) *(Add the link once published)*
+[Project link on GitHub Pages](https://ramamalali.github.io/UI-Spark/) 
 
 ## 🤝 Contributions
 This is a training project, but feedback and suggestions are always welcome
